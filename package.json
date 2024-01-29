@@ -1,8 +1,11 @@
 {
   "name": "@nathan-vm/use-storage",
   "author": "Nathan Vieira Marcelino",
+  "repository": {
+    "url": "https://github.com/nathan-vm/use-storage"
+  },
   "module": "dist/use-storage.esm.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,10 +14,10 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm", 
+    "preinstall": "npx only-allow pnpm",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
