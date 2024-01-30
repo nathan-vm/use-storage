@@ -9,7 +9,7 @@ import { stringifyOrKepOriginal, tryParseJSON } from './utils/parseJson';
 
 interface IStorageContext {
   getItem: <T = string>(key: string) => T | null;
-  setItem: (key: string, value: string | object) => void;
+  setItem: (key: string, value: any) => void;
   removeItem: (key: string) => void;
   clear: () => void;
 }
@@ -53,7 +53,7 @@ export const StorageProvider: React.FC<{ children?: ReactNode }> = ({
   );
 
   const setItem = useCallback(
-    function (key: string, value: string | object) {
+    function (key: string, value: any) {
       setStorageMemory((s) => ({ ...s, [key]: value }));
       localStorage.setItem(key, stringifyOrKepOriginal(value));
     },
